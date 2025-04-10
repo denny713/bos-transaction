@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: bos-trans
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=BOS;integratedSecurity=false;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Jakarta
+    username: sa
+    password: P@ssw0rd
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+        format_sql: true
+    show-sql: true
+server:
+  port: 3000
+  servlet:
+    context-path: /api
